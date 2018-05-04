@@ -1,0 +1,70 @@
+// 初始化样式
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+}
+body {
+	background: #FFF;
+	color: #321E1E;
+	font-family: "PingFangSC-Regular", "思源黑体", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	font-size: 0.32rem;
+	height: 100%;
+}
+input,button,textarea {
+	outline: 0;
+	border: 0;
+	font-family: "PingFangSC-Regular", "思源黑体", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+input {
+	font-size: 0.32rem;
+	color: #321E1E;
+}
+button{
+	background: none;
+}
+textarea{
+	resize: none;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+
+// 单行文本溢出显示省略号
+.overflow-ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+// 按钮
+// 主操作按钮
+.main-btn {
+	display: block;
+	width: 100%;
+	height: 0.92rem;
+	border-radius: 0.08rem;
+	font-size: 0.36rem;
+}
+// 红色按钮
+.red-btn {
+	color: #fff;
+	background: #E50113;
+	&[disabled] {
+		background: rgba(229,1,19,0.3);
+	}
+}
+// 表单公共样式
+.input-row {
+	padding-bottom: 0.28rem;
+	border-bottom: 0.01rem solid #F1E7E7;
+}
+// 必输项‘*’
+.required-star {
+	color: #f00;
+}
