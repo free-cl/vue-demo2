@@ -28,7 +28,7 @@ npm run dev
 ├── .babelrc                   // babel-loader 配置
 ├── index.html                 // html模板
 └── package.json               // package.json
-```
+
 
 ## 开发说明
 ### package.json(http://javascript.ruanyifeng.com/nodejs/packagejson.html)
@@ -54,3 +54,4 @@ Babel是一个广泛使用的转码器，可以将ES6代码转为ES5代码，从
 
 ### 尺寸单位使用rem
 将UI图上的px尺寸单位换算成rem
+```
