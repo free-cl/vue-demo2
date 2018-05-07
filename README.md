@@ -46,12 +46,25 @@ https://router.vuejs.org/zh-cn/essentials/getting-started.html
 通过注入路由器，我们可以在任何组件内通过 this.$router 访问路由器，也可以通过 this.$route 访问当前路由
 this.$router.push、this.$router.replace、this.$router.go、this.$route.query
 3）webpack：
-https://doc.webpack-china.org/configuration/dev-server/#devserver
-https://doc.webpack-china.org/configuration/resolve/#resolve
+https://doc.webpack-china.org/configuration/dev-server/
+https://doc.webpack-china.org/configuration/resolve/
 4）babel：
-https://babeljs.cn/docs/setup/#installation
+https://babeljs.cn/docs/setup/
 Babel是一个广泛使用的转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。(低版本浏览器不支持es6)
 
 ### 尺寸单位使用rem
 将UI图上的px尺寸单位换算成rem
+
+### 其它
+1）CommonsChunkPlugin（https://doc.webpack-china.org/plugins/commons-chunk-plugin/）
+通过将公共模块拆出来，最终合成的文件能够在最开始的时候加载一次，便存到缓存中供后续使用。这个带来速度上的提升，因为浏览器会迅速将公共的代码从缓存中取出来，而不是每次访问一个新页面时，再去加载一个更大的文件。
+2）从 webpack v4.0.0 开始，可以不用引入一个配置文件。然而，webpack 仍然还是高度可配置的。
+3）webpack
+3.1）loader 让 webpack 能够去处理那些非 JavaScript 文件（webpack 自身只理解 JavaScript）。loader 可以将所有类型的文件转换为 webpack 能够处理的有效模块，然后你就可以利用 webpack 的打包能力，对它们进行处理。
+3.2）loader 被用于转换某些类型的模块，而插件则可以用于执行范围更广的任务。插件的范围包括，从打包优化和压缩，一直到重新定义环境中的变量。
+由于插件可以携带参数/选项，你必须在 webpack 配置中，向 plugins 属性传入 new 实例。
+3.3）webpack 的配置文件，是导出一个对象的 JavaScript 文件。此对象，由 webpack 根据对象定义的属性进行解析。webpack 配置是标准的 Node.js CommonJS 模块。
+4）webpack模块解析Resolve：用于帮助找到模块的绝对路径
+import router from './router' => import router from './router/index'
+https://doc.webpack-china.org/configuration/resolve/（alias、extensions、mainfiles等）
 ```

@@ -24,7 +24,7 @@ export default {
       console.log(this.username, this.password)
       const username = this.username.trim()
       const password = this.password
-      // this.$router.push('/index/activityList')
+      this.$router.push('/index/activityList')
     }
   }
 }
