@@ -90,6 +90,10 @@ process对象是 Node 的一个全局对象，提供当前 Node 进程的信息�
 7.4）提取组件的 CSS
 当使用单文件组件时，组件内的 CSS 会以 <style> 标签的方式通过 JavaScript 动态注入。这有一些小小的运行时开销，如果你使用服务端渲染，这会导致一段“无样式内容闪烁 (fouc)”。将所有组件的 CSS 提取到同一个文件可以避免这个问题，也会让 CSS 更好地进行压缩和缓存。（通常最好的做法是使用 ExtractTextPlugin 将 CSS 分离成单独的文件）
 
+8）webpack指南
+不推荐全局安装 webpack。这会将你项目中的 webpack 锁定到指定版本，并且在使用不同的 webpack 版本的项目中，可能会导致构建失败。
+在 webpack 4 中，可以无须任何配置使用，然而大多数项目会需要很复杂的设置，这就是为什么 webpack 仍然要支持 配置文件。这比在终端中手动输入大量命令要高效的多。
+
 ### nodejs
 http://javascript.ruanyifeng.com/nodejs/basic.html（基本用法、全局对象和全局变量）
 1）全局对象和全局变量
